@@ -19,16 +19,17 @@ var ruleTester = new RuleTester();
 ruleTester.run("no-date", rule, {
   valid: [
     // give me some code that won't trigger a warning
+    "var x = 10;"
   ],
 
   invalid: [
     {
-      code: "new Date()",
+      code: "var x = new Date();",
       errors: [
         {
           message:
             "Use moment for date manipulation due to user timezone consideration.",
-          type: "error"
+          type: "NewExpression"
         }
       ]
     }
