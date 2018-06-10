@@ -19,7 +19,7 @@ var ruleTester = new RuleTester();
 ruleTester.run("no-date", rule, {
   valid: [
     // give me some code that won't trigger a warning
-    "var x = 10;"
+    "var x = moment().toISOString();"
   ],
 
   invalid: [

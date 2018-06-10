@@ -19,7 +19,7 @@ Examples of **correct** code for this rule:
 
 ```js
 
-new moment().toISOString();
+moment().toISOString();
 
 ```
 
