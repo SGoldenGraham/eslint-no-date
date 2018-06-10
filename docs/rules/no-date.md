@@ -1,6 +1,6 @@
-# blah (no-date)
+# no-date
 
-Please describe the origin of the rule here.
+We have found that when the project has an alternate way of detecting the user timezone, new Date() does not suffice. Instead we have used moment, to set the default timezone, based on the users preferences.
 
 
 ## Rule Details
@@ -11,7 +11,7 @@ Examples of **incorrect** code for this rule:
 
 ```js
 
-// fill me in
+var date = new Date();
 
 ```
 
@@ -19,18 +19,15 @@ Examples of **correct** code for this rule:
 
 ```js
 
-// fill me in
+new moment().toISOString();
 
 ```
 
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+If you are using the browser settings to dictate the users timezone. Then new Date() will be sufficient.
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+https://zachholman.com/talk/utc-is-enough-for-everyone-right

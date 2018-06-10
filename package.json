@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-date",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "enforces that the Date constructor is not called and suggests the use of moment",
   "keywords": [
     "eslint",
